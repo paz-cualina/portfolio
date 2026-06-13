@@ -1,0 +1,111 @@
+.section {
+  position: relative;
+  padding: 160px 48px 120px;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--line);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+.leftCol {
+  position: sticky;
+  top: 100px;
+}
+.avatar {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: #080808;
+  border: 1px solid var(--line-strong);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.avatarInner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatarPre {
+  margin: 0;
+  padding: 0;
+  font-family: var(--mono);
+  font-size: 14px;
+  line-height: 1.2;
+  color: #fff;
+  letter-spacing: 0.2em;
+  text-align: center;
+  white-space: pre;
+  display: block;
+}
+.idRow {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-faint);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+.online {
+  color: var(--accent);
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.paragraph {
+  font-family: var(--display);
+  font-size: clamp(18px, 2.4vw, 24px);
+  line-height: 1.25;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.accent {
+  color: var(--accent);
+}
+.metaRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: auto;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  font-family: var(--mono);
+}
+.metaLabel {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 8px;
+}
+.metaValue {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 300;
+}
+.metaSub {
+  font-size: 11px;
+  color: var(--accent);
+  margin-top: 4px;
+  letter-spacing: 0.1em;
+}
+
+/** Responsive styles */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .leftCol {
+    position: static;
+  }
+}

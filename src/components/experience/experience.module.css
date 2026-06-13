@@ -1,0 +1,100 @@
+.section {
+  position: relative;
+  padding: 120px 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--line);
+}
+.heading {
+  font-family: var(--display);
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 80px;
+  max-width: 900px;
+}
+.accent {
+  color: var(--accent);
+}
+.timeline {
+  position: relative;
+}
+.job {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 48px;
+  padding: 48px 0;
+  border-top: 1px solid var(--line);
+  position: relative;
+  cursor: default;
+  transition: background 0.4s;
+}
+.job:hover .company {
+  color: var(--accent);
+  transform: translateX(8px);
+}
+.period {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-transform: uppercase;
+  padding-top: 8px;
+}
+.company {
+  font-family: var(--display);
+  font-size: clamp(32px, 3.6vw, 56px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  color: #fff;
+  margin-bottom: 8px;
+  transition:
+    transform 0.4s,
+    color 0.4s;
+}
+.role {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--text-dim);
+  letter-spacing: 0.06em;
+  margin-bottom: 24px;
+}
+.industry {
+  color: var(--text-faint);
+}
+.desc {
+  font-family: var(--display);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--text-dim);
+  max-width: 760px;
+  margin-bottom: 24px;
+  text-wrap: pretty;
+}
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.stackItem {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+}
+.divider {
+  border-top: 1px solid var(--line);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .job {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}

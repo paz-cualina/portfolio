@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Nav.module.css';
+import styles from './nav.module.css';
 
 const Nav = () => {
   const [active, setActive] = React.useState('hero');

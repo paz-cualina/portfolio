@@ -46,20 +46,21 @@ const Hero = () => {
             <span>Available for new opportunities</span>
           </div>
           <h1 className={styles.title}>
-            Frontend
+            Product
             <br />
-            Developer
+            Designer
             <br />
-            <span className={styles.titleAccent}>&</span> UX/UI
+            <span className={styles.titleAccent}>&</span> Frontend
             <br />
-            Designer<span className={styles.titleAccent}>.</span>
+            Developer<span className={styles.titleAccent}>.</span>
           </h1>
           <p className={styles.role}>
-            {'// bridging design and engineering — five years building'}
+            {
+              '// Bridging product design and engineering — collaborating with stakeholders to transform complex problems'
+            }
             <br />
-            pixel-perfect, user-centered web experiences in React,
+            into intuitive, scalable digital experiences.
             <br />
-            TypeScript, WordPress, and Webflow.
           </p>
         </div>
 

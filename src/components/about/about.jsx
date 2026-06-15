@@ -26,20 +26,21 @@ const About = () => {
         <div className={styles.column}>
           <Reveal delay={100}>
             <p className={styles.paragraph}>
-              I&apos;m a Front-End Developer and UX/UI Designer based in Uruguay. I work at the
-              intersection of <span className={styles.accent}>design</span> and{' '}
-              <span className={styles.accent}>engineering</span> — taking interfaces from Figma to
-              production-ready React, with a strong eye for craft, motion, and detail.
+              I&apos;m a <span className={styles.accent}>Product Designer</span> and{' '}
+              <span className={styles.accent}>Front-End Developer</span> based in Uruguay, working
+              at the intersection of product strategy, design, and engineering. I collaborate with
+              stakeholders to identify operational challenges, define requirements, and design
+              end-to-end solutions — from user flows and interfaces to production-ready React
+              implementations.
             </p>
           </Reveal>
 
           <Reveal delay={200}>
             <p className={styles.paragraph} style={{ marginTop: 32, color: 'var(--text-dim)' }}>
-              Currently leading end-to-end design + frontend implementation at{' '}
-              <span style={{ color: '#fff' }}>Paramek</span>, where I own the company-wide design
-              system and translate it into React. Previously building Webflow and WordPress products
-              at Qubika. Background in Fashion Design — which still shapes how I think about
-              composition, rhythm, and hierarchy.
+              Currently, I lead product design and frontend development at{' '}
+              <span style={{ color: '#fff' }}>Paramek</span>, owning the company-wide design system
+              and translating it into scalable React experiences. I specialize in turning complex
+              workflows into intuitive products.
             </p>
           </Reveal>
 

@@ -15,7 +15,11 @@ const REACT_PROJECTS = [
     title: 'Travel Booking for Agents',
     role: 'Frontend Development · Figma',
     tag: 'Single-page app · 2025',
-    desc: 'Single-page React + TypeScript frontend for a travel booking platform. Agents search, filter and compare flights, hotels and cars; view paginated multi-leg results, inspect fare alternatives via modals, and select flights to proceed to a review-and-book flow.',
+    desc: [
+      `Led the design and frontend implementation of an internal corporate travel management platform created to replace a third-party booking system with transaction-based costs.`,
+      `Partnered with operational stakeholders to understand travel agents' workflows and translate business needs into intuitive product experiences. Designed end-to-end booking flows for flights, hotels, and rental cars, enabling agents to efficiently manage business travel for employees across multiple client organizations.`,
+      `Created a centralized experience where agents could access traveler profiles, company information, itineraries, invoices, and ticket statuses in a single place, reducing context switching and supporting more efficient travel operations. Responsible for user flows, interface design, design system implementation, and frontend development using React and TypeScript.`,
+    ],
     stack: ['React', 'TypeScript', 'Vite', 'Mantine', 'TanStack Router', 'TanStack Query', 'Figma'],
     link: {
       label: 'View demo',

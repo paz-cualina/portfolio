@@ -13,7 +13,9 @@ export const WorkHeader = () => (
     </Reveal>
     <Reveal delay={200}>
       <p className={styles.subheading}>
-        {"// a curated cut of the work I'm proud of — split into React applications where I owned design and code, and websites where I implemented the frontend."}
+        {
+          "// a curated cut of the work I'm proud of — split into React applications where I owned design and code, and websites where I implemented the frontend."
+        }
       </p>
     </Reveal>
   </div>

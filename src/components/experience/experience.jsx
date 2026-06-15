@@ -7,9 +7,9 @@ const JOBS = [
   {
     period: '11.2025 — Present',
     company: 'Paramek',
-    role: 'UX/UI Designer & Frontend Developer',
+    role: 'Frontend Developer & Product Designer',
     industry: 'Business Travel',
-    desc: 'End-to-end design and implementation of all company applications. I own the company-wide design system in Figma — ensuring visual consistency and scalability across products — and translate designs into code with React, bridging the gap between design and engineering.',
+    desc: "Lead end-to-end product design and frontend development across the company's applications. Partner with stakeholders to understand operational challenges, define requirements, and design intuitive solutions. Own the company-wide design system in Figma and implement scalable React applications, bridging the gap between design and engineering.",
     stack: ['React', 'TypeScript', 'Figma', 'Design Systems'],
   },
   {

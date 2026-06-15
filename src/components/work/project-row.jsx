@@ -52,7 +52,10 @@ export const ProjectRow = ({ project, reverse, highlight }) => {
         </div>
 
         <div className={styles.textSide}>
-          <div className={styles.projectRole}>{'// '}{project.role}</div>
+          <div className={styles.projectRole}>
+            {'// '}
+            {project.role}
+          </div>
           <h3 className={`${styles.projectTitle} ${project.url ? styles.projectTitleWithUrl : ''}`}>
             {project.title}
           </h3>
@@ -66,7 +69,22 @@ export const ProjectRow = ({ project, reverse, highlight }) => {
               <span className={styles.urlArrow}>↗</span> {project.url}
             </a>
           )}
-          <p className={styles.projectDesc}>{project.desc}</p>
+          {Array.isArray(project.desc) ? (
+            project.desc.map((p, i) => (
+              <p key={i} className={styles.projectDesc}>
+                {p}
+              </p>
+            ))
+          ) : (
+            <p className={styles.projectDesc}>{project.desc}</p>
+          )}
+          <div className={styles.stack}>
+            {project.stack.map((s) => (
+              <span key={s} className={styles.stackItem}>
+                {s}
+              </span>
+            ))}
+          </div>
           <div className={styles.stack}>
             {project.stack.map((s) => (
               <span key={s} className={styles.stackItem}>

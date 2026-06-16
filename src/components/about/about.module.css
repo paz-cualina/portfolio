@@ -101,11 +101,18 @@
 
 /** Responsive styles */
 @media (max-width: 768px) {
+  .section {
+    padding: 90px 24px 60px;
+  }
   .grid {
     grid-template-columns: 1fr;
     gap: 48px;
   }
   .leftCol {
     position: static;
+  }
+  .metaRow {
+    padding-top: 32px;
+    margin-top: 60px;
   }
 }

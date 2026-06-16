@@ -64,10 +64,6 @@ const Contact = () => {
               Designed & built by me<span className={styles.accent}>.</span>
             </div>
           </div>
-          <div className={styles.footerCenter}>
-            <div className={styles.footerStatus}>● ALL SYSTEMS OPERATIONAL</div>
-            <div className={styles.footerVersion}>v2026.04 / EN</div>
-          </div>
           <div className={styles.footerRight}>
             <div className={styles.footerMade}>Made with React</div>
             <div className={styles.footerLocation}>Montevideo / UY</div>

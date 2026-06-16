@@ -178,3 +178,10 @@
     transform: translateX(250%);
   }
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .content {
+    padding: 24px;
+  }
+}

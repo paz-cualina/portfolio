@@ -41,10 +41,6 @@ const Hero = () => {
 
         {/* Center hero text */}
         <div className={styles.center}>
-          <div className={styles.statusLine}>
-            <span className={styles.dot} />
-            <span>Available for new opportunities</span>
-          </div>
           <h1 className={styles.title}>
             Product
             <br />

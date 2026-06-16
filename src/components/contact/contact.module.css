@@ -151,3 +151,17 @@
 .footerLocation {
   margin-top: 6px;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 24px;
+  }
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+  }
+  .divider {
+    display: none;
+  }
+}

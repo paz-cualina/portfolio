@@ -183,6 +183,12 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .header {
+    padding: 120px 24px 60px;
+  }
+  .category {
+    padding: 80px 24px;
+  }
   .row {
     gap: 24px;
   }

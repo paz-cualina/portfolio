@@ -85,13 +85,6 @@ export const ProjectRow = ({ project, reverse, highlight }) => {
               </span>
             ))}
           </div>
-          <div className={styles.stack}>
-            {project.stack.map((s) => (
-              <span key={s} className={styles.stackItem}>
-                {s}
-              </span>
-            ))}
-          </div>
           {project.link && (
             <a
               ref={ctaRef}

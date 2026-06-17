@@ -8,10 +8,10 @@ const Hero = () => {
   React.useEffect(() => {
     const update = () => {
       const d = new Date();
-      const hh = String(d.getUTCHours()).padStart(2, '0');
-      const mm = String(d.getUTCMinutes()).padStart(2, '0');
-      const ss = String(d.getUTCSeconds()).padStart(2, '0');
-      setTime(`${hh}:${mm}:${ss} UTC`);
+      const hh = String(d.getHours()).padStart(2, '0');
+      const mm = String(d.getMinutes()).padStart(2, '0');
+      const ss = String(d.getSeconds()).padStart(2, '0');
+      setTime(`${hh}:${mm}:${ss}`);
     };
     update();
     const t = setInterval(update, 1000);
@@ -35,7 +35,7 @@ const Hero = () => {
           </div>
           <div className={styles.topBarRight}>
             <div>Montevideo / UY</div>
-            <div className={styles.topBarTime}>{time}</div>
+            <div className={styles.topBarTime}>{time} UYT</div>
           </div>
         </div>
 
@@ -70,7 +70,7 @@ const Hero = () => {
           </div>
           <div className={styles.techStack}>
             <div>5 yrs experience</div>
-            <div className={styles.techStackSub}>React · TS · Figma · Webflow · WP</div>
+            <div className={styles.techStackSub}>React · Figma · Webflow · WP</div>
           </div>
         </div>
       </div>

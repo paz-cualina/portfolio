@@ -2,7 +2,8 @@ import { WorkHeader } from './work-header.jsx';
 import { WorkCategory } from './work-category.jsx';
 import agentOverlay from '../../assets/agent-overlay.png';
 import adidasByKorn from '../../assets/adidas-by-korn.png';
-import tattooApp from '../../assets/tattoo-app.png';
+// import tattooApp from '../../assets/tattoo-app.png';
+import kireva from '../../assets/kireva.png';
 import tallied from '../../assets/tallied.png';
 import proterisCompliance from '../../assets/proteris.png';
 import tadigital from '../../assets/ta-digital.png';
@@ -12,8 +13,25 @@ import cuemateTennis from '../../assets/cuemate-tennis.png';
 const REACT_PROJECTS = [
   {
     n: '01',
+    title: 'School Management Platform',
+    role: 'Frontend Development · Product Design',
+    tag: 'Single-page app · 2026',
+    desc: [
+      `Led the design and frontend implementation of a school management platform created to streamline the day-to-day operations of an educational institution, giving schools a single place to manage students, staff, classes, grades, and attendance.`,
+      `Schools often juggle student records, grading, attendance, and reporting across spreadsheets and disconnected tools. Kireva centralizes these workflows into one role-aware platform, so administrators, teachers, and staff each see exactly the data and actions relevant to their job — reducing manual work and keeping academic records accurate and consistent.`,
+    ],
+    stack: ['React', 'TypeScript', 'Next.js', 'Radix UI', 'Redux', 'Axios', 'Figma'],
+    link: {
+      label: 'View demo',
+      href: 'https://drive.google.com/file/d/18RHlmoOhndN4PJdbS7ycWEqk5dzaMC0L/view?usp=sharing',
+    },
+    label: 'School management · admin dashboard',
+    image: kireva,
+  },
+  {
+    n: '02',
     title: 'Travel Booking for Agents',
-    role: 'Frontend Development · Figma',
+    role: 'Frontend Development · Product Design',
     tag: 'Single-page app · 2025',
     desc: [
       `Led the design and frontend implementation of an internal corporate travel management platform created to replace a third-party booking system with transaction-based costs.`,
@@ -23,13 +41,13 @@ const REACT_PROJECTS = [
     stack: ['React', 'TypeScript', 'Vite', 'Mantine', 'TanStack Router', 'TanStack Query', 'Figma'],
     link: {
       label: 'View demo',
-      href: 'https://drive.google.com/file/d/1w831IfKZeMq2I48vGr2cdqnHz1iAOIVq/view?usp=drive_link',
+      href: 'https://drive.google.com/file/d/11xWYF8XakSigVNGkr16zqyecLSIquiq0/view?usp=sharing',
     },
     label: 'Travel booking · agent dashboard',
     image: agentOverlay,
   },
   {
-    n: '02',
+    n: '03',
     title: 'Adidas by Korn',
     role: 'Figma → JavaScript',
     tag: 'E-commerce · 2024',
@@ -42,20 +60,20 @@ const REACT_PROJECTS = [
     label: 'E-commerce · single-page app',
     image: adidasByKorn,
   },
-  {
-    n: '03',
-    title: 'Tattoo App',
-    role: 'Figma — UX/UI only',
-    tag: 'Mobile · 2023',
-    desc: 'Mobile app for discovering tattoo designs and artists. Browse and save favorites, explore categorized styles, connect with artists through in-app chat to coordinate appointments, and receive scheduled notifications for upcoming sessions.',
-    stack: ['Figma', 'UX Research', 'Prototyping', 'iOS / Android'],
-    link: {
-      label: 'View prototype',
-      href: 'https://www.figma.com/proto/uGxGxRvZLqUoZpiChsTUKE/Prototipo-funcional--Microinteracciones-?node-id=931-2118&p=f&t=SBG37f3Z9SvQ7RfU-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=931%3A2118',
-    },
-    label: 'Mobile · discovery + chat',
-    image: tattooApp,
-  },
+  // {
+  //   n: '03',
+  //   title: 'Tattoo App',
+  //   role: 'Figma — UX/UI only',
+  //   tag: 'Mobile · 2023',
+  //   desc: 'Mobile app for discovering tattoo designs and artists. Browse and save favorites, explore categorized styles, connect with artists through in-app chat to coordinate appointments, and receive scheduled notifications for upcoming sessions.',
+  //   stack: ['Figma', 'UX Research', 'Prototyping', 'iOS / Android'],
+  //   link: {
+  //     label: 'View prototype',
+  //     href: 'https://www.figma.com/proto/uGxGxRvZLqUoZpiChsTUKE/Prototipo-funcional--Microinteracciones-?node-id=931-2118&p=f&t=SBG37f3Z9SvQ7RfU-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=931%3A2118',
+  //   },
+  //   label: 'Mobile · discovery + chat',
+  //   image: tattooApp,
+  // },
 ];
 
 const WEBFLOW_SITES = [

@@ -1,0 +1,95 @@
+.section {
+  padding: 120px var(--gutter) 140px;
+  border-top: 1px solid var(--line);
+}
+.inner {
+  max-width: var(--page);
+  margin: 0 auto;
+}
+
+/* 1px gap over a line-coloured background draws the internal grid rules */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 60px;
+}
+.cell {
+  background: var(--bg);
+  text-decoration: none;
+  color: inherit;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background 0.3s;
+}
+.cell:hover {
+  background: var(--bg-soft);
+}
+/* With an odd number of sites the last one spans both columns, so the grid
+   background never shows through as an empty cell. */
+.cell:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+.arrow {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+}
+.meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+.summary {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-dim);
+  text-wrap: pretty;
+  flex: 1;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+.tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 4px 10px;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 90px 24px 100px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+  .cell {
+    padding: 24px;
+  }
+}

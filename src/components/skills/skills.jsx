@@ -1,62 +1,37 @@
-import React from 'react';
-import { Reveal, SectionLabel } from '../../utils.jsx';
-import { SkillGroup } from './skill-group.jsx';
+import { Reveal, SectionHead } from '../../utils.jsx';
+import { MARQUEE_ITEMS, STACK_CATEGORIES } from '../../data/content.js';
 import styles from './skills.module.css';
 
-const GROUPS = [
-  {
-    label: 'Frontend',
-    items: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'TypeScript',
-      'React.js',
-      'Vite',
-      'Ky',
-      'Zustand',
-      'TanStack Query',
-      'TanStack Form',
-      'Mantine UI',
-    ],
-  },
-  {
-    label: 'CMS / No-code',
-    items: ['WordPress', 'Custom Themes', 'ACF', 'Webflow', 'Visual Composer', 'Divi'],
-  },
-  {
-    label: 'Design',
-    items: [
-      'Figma',
-      'Design Systems',
-      'UX Research',
-      'Wireframing',
-      'Prototyping',
-      'Claude Design',
-      'Photoshop',
-      'Illustrator',
-    ],
-  },
-  {
-    label: 'Other',
-    items: ['PHP', 'SQL', 'Git / GitHub', 'Jira', 'Yoast SEO'],
-  },
-];
+// The marquee loops by rendering the strip twice and translating -50%.
+const marqueeText = `${MARQUEE_ITEMS.join(' · ')} · `.repeat(2);
 
 const Skills = () => (
-  <section id="skills" className={styles.section}>
-    <Reveal>
-      <SectionLabel index="02" label="Stack" />
-    </Reveal>
-    <Reveal delay={100}>
-      <h2 className={styles.heading}>
-        Tools, frameworks &<br />
-        <span className={styles.accent}>tech I build with.</span>
-      </h2>
-    </Reveal>
-    <div className={styles.grid}>
-      {GROUPS.map((group, i) => (
-        <SkillGroup key={group.label} group={group} index={i} delay={i * 100} />
+  <section id="stack" className={styles.section}>
+    <div className={styles.inner}>
+      <SectionHead index="02" title="Tools, frameworks & tech I build with." />
+    </div>
+
+    <div className={styles.marquee} aria-hidden="true">
+      <div className={styles.marqueeTrack}>
+        <span className={styles.marqueeText}>{marqueeText}</span>
+        <span className={styles.marqueeText}>{marqueeText}</span>
+      </div>
+    </div>
+
+    <div className={`${styles.inner} ${styles.categories}`}>
+      {STACK_CATEGORIES.map((cat) => (
+        <Reveal key={cat.num}>
+          <div className={styles.catName}>
+            {cat.num} {cat.name}
+          </div>
+          <div className={styles.pills}>
+            {cat.items.map((tool) => (
+              <span key={tool} className={styles.pill}>
+                {tool}
+              </span>
+            ))}
+          </div>
+        </Reveal>
       ))}
     </div>
   </section>

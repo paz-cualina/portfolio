@@ -1,0 +1,86 @@
+/* Section head: oversized number + title */
+.head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 60px;
+}
+.headIndex {
+  font-family: var(--mono);
+  font-size: 100px;
+  font-weight: 600;
+  color: var(--ghost);
+  line-height: 1;
+}
+.headTitle {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+}
+.headKicker {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 14px;
+}
+
+/* Screenshots. `contain` over `cover`: these are dense UI captures, so cropping
+   them cuts off text. The letterboxing sits on the soft background. */
+.shot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: var(--bg-soft);
+}
+.placeholder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  text-align: center;
+  background: var(--accent-soft);
+  border: 1px dashed var(--line);
+}
+.placeholderTag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.placeholderLabel {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+}
+.placeholderFile {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--accent-deep);
+}
+
+@media (max-width: 900px) {
+  .head {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .headIndex {
+    font-size: 56px;
+  }
+}

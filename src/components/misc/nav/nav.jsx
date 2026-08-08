@@ -1,20 +1,14 @@
 import React from 'react';
+import { NAV_ITEMS } from '../../../data/content.js';
 import styles from './nav.module.css';
 
+// Dot rail. Scrolls programmatically instead of using `href="#id"` — the app
+// runs under HashRouter, where an anchor hash would be read as a route.
 const Nav = () => {
-  const [active, setActive] = React.useState('hero');
-  const sections = [
-    { id: 'hero', label: 'Top' },
-    { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'work', label: 'Work' },
-    { id: 'education', label: 'Education' },
-    { id: 'contact', label: 'Contact' },
-  ];
+  const [active, setActive] = React.useState(NAV_ITEMS[0].id);
 
   React.useEffect(() => {
-    const observers = sections.map(({ id }) => {
+    const observers = NAV_ITEMS.map(({ id }) => {
       const el = document.getElementById(id);
       if (!el) return null;
       const io = new IntersectionObserver(
@@ -31,18 +25,22 @@ const Nav = () => {
     return () => observers.forEach((o) => o && o.disconnect());
   }, []);
 
+  const goTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
-    <nav className={styles.nav}>
-      {sections.map((s) => (
-        <a
-          key={s.id}
-          href={`#${s.id}`}
-          className={styles.link}
-          style={{ color: active === s.id ? 'var(--accent)' : 'var(--text-faint)' }}
-        >
-          <span className={styles.line} style={{ width: active === s.id ? 24 : 12 }} />
-          <span style={{ opacity: active === s.id ? 1 : 0.5 }}>{s.label}</span>
-        </a>
+    <nav className={styles.nav} aria-label="Sections">
+      {NAV_ITEMS.map((item) => (
+        <button
+          key={item.id}
+          type="button"
+          onClick={() => goTo(item.id)}
+          className={`${styles.dot} ${active === item.id ? styles.dotActive : ''}`}
+          title={item.label}
+          aria-label={item.label}
+          aria-current={active === item.id ? 'true' : undefined}
+        />
       ))}
     </nav>
   );

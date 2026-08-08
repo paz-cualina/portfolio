@@ -1,77 +1,39 @@
-import { Reveal, SectionLabel } from '../../utils.jsx';
+import { Reveal } from '../../utils.jsx';
+import { CONTACT } from '../../data/content.js';
 import styles from './contact.module.css';
 
-const Contact = () => {
-  return (
-    <section id="contact" className={styles.section}>
-      <Reveal>
-        <SectionLabel index="08" label="Contact" />
-      </Reveal>
+const Contact = () => (
+  <section id="contact" className={styles.section}>
+    <div className={styles.blob} aria-hidden="true" />
 
-      <Reveal delay={100}>
-        <h2 className={styles.heading}>
-          Let&apos;s build
-          <br />
-          something
-          <br />
-          <span className={styles.accent}>great.</span>
-        </h2>
-      </Reveal>
-
-      <Reveal delay={200}>
-        <p className={styles.subheading}>
-          {'// currently open to new opportunities — full-time, contract or collaborations.'}
-        </p>
-      </Reveal>
-
-      <div className={styles.grid}>
-        {[
-          {
-            label: 'Email',
-            value: 'tamarasancristobal@gmail.com',
-            href: 'mailto:tamarasancristobal@gmail.com',
-          },
-          {
-            label: 'LinkedIn',
-            value: '/in/tamarasancristobal',
-            href: 'https://linkedin.com/in/tamarasancristobal',
-          },
-          { label: 'Location', value: 'Montevideo, Uruguay', href: null },
-        ].map((c, i) => (
-          <Reveal key={c.label} delay={i * 80}>
-            <a
-              href={c.href || '#'}
-              onClick={(e) => !c.href && e.preventDefault()}
-              className={`${styles.contactItem}${!c.href ? ` ${styles.noLink}` : ''}`}
-            >
-              <div>
-                <div className={styles.contactLabel}>{c.label}</div>
-                <div className={styles.contactValue}>{c.value}</div>
-              </div>
-              {c.href && <span className={styles.arrow}>→</span>}
-            </a>
-          </Reveal>
-        ))}
-        <div className={styles.divider} />
+    <Reveal className={styles.inner}>
+      <div className={styles.label}>07 — Currently open to new opportunities</div>
+      <h2 className={styles.title}>
+        Let&apos;s build
+        <br />
+        something great.
+      </h2>
+      <div className={styles.links}>
+        <a href={`mailto:${CONTACT.email}`} className={styles.email}>
+          {CONTACT.email}
+        </a>
+        <a
+          href={CONTACT.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.link}
+        >
+          LinkedIn ↗
+        </a>
+        <span className={styles.location}>{CONTACT.location}</span>
       </div>
+    </Reveal>
 
-      {/* Footer */}
-      <Reveal>
-        <footer className={styles.footer}>
-          <div>
-            <div className={styles.footerCopyright}>© 2026 Tamara Sancristóbal</div>
-            <div className={styles.footerCredit}>
-              Designed & built by me<span className={styles.accent}>.</span>
-            </div>
-          </div>
-          <div className={styles.footerRight}>
-            <div className={styles.footerMade}>Made with React</div>
-            <div className={styles.footerLocation}>Montevideo / UY</div>
-          </div>
-        </footer>
-      </Reveal>
-    </section>
-  );
-};
+    <div className={styles.footer}>
+      <span>© {new Date().getFullYear()} Tamara Sancristóbal</span>
+      <span>Designed &amp; built by Tamara</span>
+    </div>
+  </section>
+);
 
 export default Contact;

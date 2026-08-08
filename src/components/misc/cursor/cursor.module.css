@@ -1,0 +1,15 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent);
+  pointer-events: none;
+  z-index: 999;
+  transform: translate(-999px, -999px);
+  transition:
+    width 0.2s,
+    height 0.2s;
+}

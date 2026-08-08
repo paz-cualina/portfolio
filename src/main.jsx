@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
 import App from './App.jsx';
-
-// Ensure panels and utilities register (they also export named exports)
-import './utils.jsx';
 
 const root = document.getElementById('app');
 if (root) {
   ReactDOM.createRoot(root).render(
     <React.StrictMode>
-      <App />
+      <HashRouter>
+        <App />
+      </HashRouter>
     </React.StrictMode>
   );
 }

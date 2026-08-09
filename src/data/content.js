@@ -12,7 +12,7 @@ import kireva from '../assets/kireva.png';
 import kirevaDashboard from '../assets/kireva/dashboard.png';
 import kirevaCreateStudent from '../assets/kireva/create-student.png';
 import kirevaCreateGroup from '../assets/kireva/create-group.png';
-import kirevaCreateRole from '../assets/kireva/create-role.png';
+import kirevaCreateScore from '../assets/kireva/create-score.png';
 import tallied from '../assets/tallied.png';
 import proterisCompliance from '../assets/proteris.png';
 import tadigital from '../assets/ta-digital.png';
@@ -140,7 +140,7 @@ export const PROJECTS = [
     solution: [
       'Kireva is a school management platform where administrators, teachers, and parents each see exactly what their role requires.',
       'Admins manage the full school structure — students (with medical records and emergency contacts), class groups, classrooms, subjects, staff users, and school cycles. Teachers see only their assigned groups and subjects, where they enter grades across evaluation areas, log attendance, and publish report cards through a structured open → close workflow. Parents get a read-only view of their children’s records and school notifications.',
-      'A granular permissions system (13 permissions, fully composable into custom roles) drives role-aware routing and UI throughout — no one lands on a screen they shouldn’t access.',
+      'A granular permissions system (+15 permissions, fully composable into custom roles) drives role-aware routing and UI throughout — no one lands on a screen they shouldn’t access.',
     ],
     stack: ['React', 'TypeScript', 'Next.js', 'Radix UI', 'Redux', 'Axios', 'Figma'],
     cover: kireva,
@@ -149,7 +149,7 @@ export const PROJECTS = [
       { src: kirevaDashboard, label: 'Admin dashboard — school-wide overview and quick actions' },
       { src: kirevaCreateStudent, label: 'Student record — profile, health details and guardians' },
       { src: kirevaCreateGroup, label: 'Group setup — subjects, teacher assignment and roster' },
-      { src: kirevaCreateRole, label: 'Role builder — granular permissions per module' },
+      { src: kirevaCreateScore, label: 'Score group — grades and evaluation areas' },
     ],
   },
   {

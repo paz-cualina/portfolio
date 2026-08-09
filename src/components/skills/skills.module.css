@@ -17,6 +17,14 @@
   display: inline-flex;
   animation: marquee 26s linear infinite;
 }
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 .marqueeText {
   font-family: var(--mono);
   font-size: 15px;

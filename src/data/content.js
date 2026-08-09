@@ -139,7 +139,7 @@ export const PROJECTS = [
       'Led the design and frontend implementation end-to-end — from Figma design system to production React application.',
     solution: [
       'Kireva is a school management platform where administrators, teachers, and parents each see exactly what their role requires.',
-      'Admins manage the full school structure — students (with medical records and emergency contacts), class groups, classrooms, subjects, staff users, and school cycles. Teachers see only their assigned groups and subjects, where they enter grades across evaluation areas, log attendance, and publish report cards through a structured open → close workflow. Parents get a read-only view of their children’s records and school notifications.',
+      'Admins manage the full school structure — students, class groups, classrooms, subjects, staff users, and school cycles. Teachers see only their assigned groups and subjects, where they enter grades across evaluation areas, log attendance, and publish report cards. Parents get a read-only view of their children’s records and school notifications.',
       'A granular permissions system (+15 permissions, fully composable into custom roles) drives role-aware routing and UI throughout — no one lands on a screen they shouldn’t access.',
     ],
     stack: ['React', 'TypeScript', 'Next.js', 'Radix UI', 'Redux', 'Axios', 'Figma'],

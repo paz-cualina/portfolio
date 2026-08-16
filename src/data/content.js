@@ -10,7 +10,7 @@ import adidasAdminStock from '../assets/adidas-by-korn/admin-stock.png';
 import adidasAdminOrders from '../assets/adidas-by-korn/admin-orders.png';
 import kireva from '../assets/kireva.png';
 import kirevaDashboard from '../assets/kireva/dashboard.png';
-import kirevaCreateStudent from '../assets/kireva/create-student.png';
+import kirevaAttendance from '../assets/kireva/attendance.png';
 import kirevaCreateGroup from '../assets/kireva/create-group.png';
 import kirevaCreateScore from '../assets/kireva/create-score.png';
 import tallied from '../assets/tallied.png';
@@ -147,7 +147,7 @@ export const PROJECTS = [
     coverAlt: 'Kireva school management platform — admin dashboard',
     shots: [
       { src: kirevaDashboard, label: 'Admin dashboard — school-wide overview and quick actions' },
-      { src: kirevaCreateStudent, label: 'Student record — profile, health details and guardians' },
+      { src: kirevaAttendance, label: 'Student record — profile, health details and guardians' },
       { src: kirevaCreateGroup, label: 'Group setup — subjects, teacher assignment and roster' },
       { src: kirevaCreateScore, label: 'Score group — grades and evaluation areas' },
     ],
